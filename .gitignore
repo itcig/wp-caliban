@@ -1,0 +1,12 @@
+.DS_Store
+
+# Dependencies
+vendor
+
+# IDEs
+.idea
+.vscode/
+
+# Junk
+old/
+*.OLD.*

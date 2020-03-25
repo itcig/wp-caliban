@@ -1,0 +1,28 @@
+{
+	"name": "itcig/wp-caliban",
+	"description": "Wordpress plugin for Caliban integration",
+	"type": "wordpress-plugin",
+	"authors": [
+		{
+			"name": "Capitol Information Group",
+			"email": "it@capinfogroup.com"
+		}
+	],
+	"config": {
+		"preferred-install": "dist"
+	},
+	"repositories": {
+		"caliban": {
+			"type": "git",
+			"url": "https://github.com/itcig/caliban.git"
+		},
+		"php-helpers": {
+			"type": "git",
+			"url": "https://github.com/itcig/php-helpers.git"
+		}
+	},
+	"prefer-stable": true,
+	"require": {
+		"itcig/caliban": "dev-master"
+	}
+}
