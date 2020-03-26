@@ -23,6 +23,6 @@
 	},
 	"prefer-stable": true,
 	"require": {
-		"itcig/caliban": "dev-master"
+		"itcig/caliban": "^1.0"
 	}
 }

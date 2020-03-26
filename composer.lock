@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3787154b8e980ceb544a04f7078b435",
+    "content-hash": "d2cbc22042597716e1e3e373a0a9367f",
     "packages": [
         {
             "name": "itcig/caliban",
-            "version": "dev-master",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itcig/caliban.git",
-                "reference": "b3b3863a8dad63ae0d5013165ffaa540c646bf86"
+                "reference": "ed4e5ad911d263d3065d7e31c532a47914444874"
             },
             "require": {
                 "itcig/php-helpers": "^1.0",
@@ -34,15 +34,15 @@
                 }
             ],
             "description": "Utility for reading and writing client session data",
-            "time": "2020-03-25T13:36:32+00:00"
+            "time": "2020-03-26T04:28:08+00:00"
         },
         {
             "name": "itcig/php-helpers",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itcig/php-helpers.git",
-                "reference": "0e684882b93b99e35a3ea94f630c39d49ca5bd11"
+                "reference": "30dd0e78c8f45343916f94249a92a1628ea2cf4c"
             },
             "require": {
                 "php": "^7.1"
@@ -63,7 +63,7 @@
                 }
             ],
             "description": "PHP helper methods",
-            "time": "2020-03-24T12:59:22+00:00"
+            "time": "2020-03-26T03:39:23+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -337,9 +337,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "itcig/caliban": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
