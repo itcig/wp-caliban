@@ -1,11 +1,13 @@
-.DS_Store
-
 # Dependencies
 vendor
 
 # IDEs
 .idea
 .vscode/
+
+#Local Files
+.DS_Store
+composer.local.*
 
 # Junk
 old/

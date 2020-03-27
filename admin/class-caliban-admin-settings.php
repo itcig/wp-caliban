@@ -14,37 +14,63 @@ namespace Caliban\WP\Admin;
 
 class Caliban_Admin_Settings {
 
-	/**
-	 * The ID of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string $plugin_name The ID of this plugin.
-	 */
-	private $plugin_name;
+	private static $instances = [];
 
-	/**
-	 * The version of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string $version The current version of this plugin.
-	 */
-	private $version;
+	private $settings_meta;
 
 	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 *
-	 * @param      string $plugin_name The name of this plugin.
-	 * @param      string $version The version of this plugin.
 	 */
-	public function __construct($plugin_name, $version) {
+	protected function __construct() {
 
-		$this->plugin_name = $plugin_name;
-		$this->version = $version;
+		$this->settings_meta = [
+			'property_id' => [
+				'data_type' => 'string',
+				'constant_name' => 'CBN_PROPERTY_ID',
+			],
+			'session_timeout' => [
+				'data_type' => 'string',
+				'constant_name' => 'CBN_CACHE_EXPIRATION',
+			],
+			'append_params' => [
+				'data_type' => 'string_array',
+				'constant_name' => 'CBN_APPEND_PARAMS',
+			],
+			'ignore_classes' => [
+				'data_type' => 'string_array',
+				'constant_name' => 'CBN_IGNORE_CLASSES',
+			],
+			'debug' => [
+				'data_type' => 'bool',
+				'constant_name' => 'CBN_DEBUG',
+			],
+			'debug_forms' => [
+				'data_type' => 'bool',
+				'constant_name' => 'CBN_DEBUG_FORMS',
+			],
+			'enable_link_tracking' => [
+				'data_type' => 'bool',
+				'constant_name' => 'CBN_ENABLE_LINK_TRACKING',
+			],
+		];
 
+	}
+
+	public static function get_instance() {
+
+		$class = get_called_class();
+
+		if (!isset(self::$instances[$class])) {
+			self::$instances[$class] = new static();
+		}
+
+		return self::$instances[$class];
+	}
+
+	public function get_settings_meta() {
+		return $this->settings_meta;
 	}
 
 	public function admin_menu() {
@@ -65,14 +91,7 @@ class Caliban_Admin_Settings {
 
 		if (isset($_POST['form_caliban_settings_submitted'])) {
 
-			$allowed_keys = [
-				'property_id',
-				'append_params',
-				'ignore_classes',
-				'debug_forms',
-				'session_timeout',
-				'enable_link_tracking',
-			];
+			$allowed_keys = array_keys($this->settings_meta);
 
 			// Check keys in $_POST against allowed keys, ignore any inputs not included
 			$filtered_form_values = array_filter($_POST, function ($value, $key) use ($allowed_keys) {
@@ -82,9 +101,22 @@ class Caliban_Admin_Settings {
 			$sanitized_form_values = [];
 
 			// Remove backslashes from json data inputs escaping quotes
-            foreach ($filtered_form_values as $key => $value) {
-                $sanitized_form_values[$key] = stripslashes($value);
-            }
+			foreach ($this->settings_meta as $key => $value) {
+
+				$setting_value = $filtered_form_values[$key] ?? null;
+
+				if ($setting_value) {
+					$sanitized_form_values[$key] = stripslashes($setting_value);
+				}
+
+				$data_type = $value['data_type'] ?? null;
+
+				// Unchecked, checkboxes are not passed but these should be falsey, not null
+				// Important to check if the key isset instead of the value
+				if ($data_type === 'bool' && !isset($filtered_form_values[$key])) {
+					$sanitized_form_values[$key] = 0;
+				}
+			}
 
             // Update options table in database
 			update_option('caliban_settings', $sanitized_form_values);

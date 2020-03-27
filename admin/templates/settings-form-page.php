@@ -30,7 +30,7 @@
 
 				<tr>
 					<th scope="row">
-						<label for="append_params">Append Params</label>
+						<label for="append_params">Append Params (CBN_APPEND_PARAMS)</label>
                     </th>
 					<td>
 						<input id="append_params" name="append_params" type="text" class="regular-text" value="<?= $caliban_settings['append_params'] ?>"/>
@@ -40,7 +40,7 @@
 
                 <tr>
                     <th scope="row">
-                        <label for="ignore_classes">Ignore Classes</label>
+                        <label for="ignore_classes">Ignore Classes (CBN_IGNORE_CLASSES)</label>
                     </th>
                     <td>
                         <input id="ignore_classes" name="ignore_classes" type="text" class="regular-text" value="<?= $caliban_settings['ignore_classes'] ?>"/>
@@ -50,11 +50,24 @@
 
                 <tr>
                     <th scope="row">
-                        <label for="session_timeout">Session Duration</label>
+                        <label for="session_timeout">Session Duration (CBN_CACHE_EXPIRATION)</label>
                     </th>
                     <td>
                         <input id="session_timeout" name="session_timeout" type="text" class="regular-text" value="<?= $caliban_settings['session_timeout'] ?>"/>
                         <p class="description">The maximum time to store a session for before expiration (in seconds)</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">
+                        <label>Debug (CBN_DEBUG)</label>
+                    </th>
+                    <td>
+                        <label for="debug">
+                            <input id="debug" name="debug" type="checkbox" class="checkbox-input" value="1" <?= $caliban_settings['debug'] ? 'checked' : ''; ?> />
+                            Enabled
+                        </label>
+                        <p class="description">Enable tracker debug mode (This should never run in production)</p>
                     </td>
                 </tr>
 
