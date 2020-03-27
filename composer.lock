@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2cbc22042597716e1e3e373a0a9367f",
+    "content-hash": "56a2e9fe32a879ca9e64c0d812d3d96b",
     "packages": [
         {
             "name": "itcig/caliban",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itcig/caliban.git",
-                "reference": "b28c85d5f499a1ca31bae4b4204f4aa5e4cc1a52"
+                "reference": "246876aa6e8b998562629a0ceb799f045597e633"
             },
             "require": {
                 "itcig/php-helpers": "^1.0",
@@ -34,7 +34,7 @@
                 }
             ],
             "description": "Utility for reading and writing client session data",
-            "time": "2020-03-27T03:00:27+00:00"
+            "time": "2020-03-27T03:46:39+00:00"
         },
         {
             "name": "itcig/php-helpers",
