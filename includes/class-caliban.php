@@ -160,9 +160,7 @@ class Caliban_WP {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 		// admin settings page
-		$plugin_settings = new \Caliban\WP\Admin\Caliban_Admin_Settings($this->get_caliban(), $this->get_version());
-
-		$this->loader->add_action('admin_menu', $plugin_settings, 'admin_menu');
+		$this->loader->add_action('admin_menu', \Caliban\WP\Admin\Caliban_Admin_Settings::get_instance(), 'admin_menu');
 	}
 
 	/**
@@ -176,9 +174,9 @@ class Caliban_WP {
 
 		$plugin_public = new \Caliban\WP\Front\Caliban_Front( $this->get_caliban(), $this->get_version() );
 
-		$this->loader->add_action( 'init', \Caliban\Caliban::get_instance(), 'server', 1);
+		$this->loader->add_action( 'init', $plugin_public, 'init', 1);
 
-		$this->loader->add_action( 'wp_head', $plugin_public, 'load_js_tracker' );
+		$this->loader->add_action( 'wp_head', $plugin_public, 'load_js_tracker', 10);
 	}
 
 	/**
