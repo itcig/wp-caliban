@@ -152,7 +152,6 @@ class Caliban_Front {
 			$tracker->set('enableLinkTracking', CBN_ENABLE_LINK_TRACKING);
 		}
 
-		$tracker->set('setCookieDomain', \Cig\get_root_domain());
 		$tracker->set('trackRequest');
 
 		// Load Caliban tracker
