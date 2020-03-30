@@ -38,6 +38,10 @@ class Caliban_Admin_Settings {
 				'data_type' => 'string_array',
 				'constant_name' => 'CBN_APPEND_PARAMS',
 			],
+			'campaign_start_params' => [
+				'data_type' => 'string_array',
+				'constant_name' => 'CBN_CAMPAIGN_START_PARAMS',
+			],
 			'ignore_classes' => [
 				'data_type' => 'string_array',
 				'constant_name' => 'CBN_IGNORE_CLASSES',
@@ -46,9 +50,9 @@ class Caliban_Admin_Settings {
 				'data_type' => 'bool',
 				'constant_name' => 'CBN_DEBUG',
 			],
-			'debug_forms' => [
-				'data_type' => 'bool',
-				'constant_name' => 'CBN_DEBUG_FORMS',
+			'form_input_namespace' => [
+				'data_type' => 'string',
+				'constant_name' => 'CBN_FORM_INPUT_NAMESPACE',
 			],
 			'enable_link_tracking' => [
 				'data_type' => 'bool',

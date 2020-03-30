@@ -132,6 +132,10 @@ class Caliban_Front {
 			$tracker->set('setAppendParams', CBN_APPEND_PARAMS);
 		}
 
+		if (defined('CBN_CAMPAIGN_START_PARAMS')) {
+			$tracker->set('setCampaignStartParams', CBN_CAMPAIGN_START_PARAMS);
+		}
+
 		if (defined('CBN_IGNORE_CLASSES')) {
 			$tracker->set('setIgnoreClasses', CBN_IGNORE_CLASSES);
 		}
@@ -140,8 +144,8 @@ class Caliban_Front {
 			$tracker->set('setDebug', CBN_DEBUG);
 		}
 
-		if (defined('CBN_DEBUG_FORMS')) {
-			$tracker->set('setDebugForms', CBN_DEBUG_FORMS);
+		if (defined('CBN_FORM_INPUT_NAMESPACE')) {
+			$tracker->set('setFormInputNamespace', CBN_FORM_INPUT_NAMESPACE);
 		}
 
 		if (defined('CBN_ENABLE_LINK_TRACKING')) {

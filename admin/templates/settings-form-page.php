@@ -40,6 +40,16 @@
 
                 <tr>
                     <th scope="row">
+                        <label for="campaign_start_params">Campaign Start Params (CBN_CAMPAIGN_START_PARAMS)</label>
+                    </th>
+                    <td>
+                        <input id="campaign_start_params" name="campaign_start_params" type="text" class="regular-text" value="<?= $caliban_settings['campaign_start_params'] ?>"/>
+                        <p class="description">Params that when present indicate the start of a new session (comma-separated). Uses `utm_campaign`, `gaclid` and `msclkid` by default.</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">
                         <label for="ignore_classes">Ignore Classes (CBN_IGNORE_CLASSES)</label>
                     </th>
                     <td>
@@ -60,6 +70,16 @@
 
                 <tr>
                     <th scope="row">
+                        <label for="form_input_namespace">Form Input Namespace (CBN_FORM_INPUT_NAMESPACE)</label>
+                    </th>
+                    <td>
+                        <input id="form_input_namespace" name="form_input_namespace" type="text" class="regular-text" value="<?= $caliban_settings['form_input_namespace'] ?>"/>
+                        <p class="description">Instead of appending all params as hidden inputs of the same name to forms, add all session data params as keys of an array by this namespace.</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">
                         <label>Debug (CBN_DEBUG)</label>
                     </th>
                     <td>
@@ -68,19 +88,6 @@
                             Enabled
                         </label>
                         <p class="description">Enable tracker debug mode (This should never run in production)</p>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th scope="row">
-                        <label>Debug Forms</label>
-                    </th>
-                    <td>
-                        <label for="debug_forms">
-                            <input id="debug_forms" name="debug_forms" type="checkbox" class="checkbox-input" value="1" <?= $caliban_settings['debug_forms'] ? 'checked' : ''; ?> />
-                            Enabled
-                        </label>
-                        <p class="description">Will append all session data as an array to a field <em>cbn_debug</em></p>
                     </td>
                 </tr>
 
