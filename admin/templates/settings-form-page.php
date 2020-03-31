@@ -40,6 +40,16 @@
 
                 <tr>
                     <th scope="row">
+                        <label for="first_attribution_params">First Attribution Params (CBN_FIRST_ATTRIBUTION_PARAMS)</label>
+                    </th>
+                    <td>
+                        <input id="first_attribution_params" name="first_attribution_params" type="text" class="regular-text" value="<?= $caliban_settings['first_attribution_params'] ?>"/>
+                        <p class="description">Params that should only be added to session on a landing page but do not necessarily symbolize the start of a campaign (comma-separated)</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">
                         <label for="campaign_start_params">Campaign Start Params (CBN_CAMPAIGN_START_PARAMS)</label>
                     </th>
                     <td>

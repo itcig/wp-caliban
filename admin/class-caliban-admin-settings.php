@@ -38,6 +38,10 @@ class Caliban_Admin_Settings {
 				'data_type' => 'string_array',
 				'constant_name' => 'CBN_APPEND_PARAMS',
 			],
+			'first_attribution_params' => [
+				'data_type' => 'string_array',
+				'constant_name' => 'CBN_FIRST_ATTRIBUTION_PARAMS',
+			],
 			'campaign_start_params' => [
 				'data_type' => 'string_array',
 				'constant_name' => 'CBN_CAMPAIGN_START_PARAMS',
