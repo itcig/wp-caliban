@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56a2e9fe32a879ca9e64c0d812d3d96b",
+    "content-hash": "5282163aa6ecd567cdc754bd2e04cc53",
     "packages": [
         {
             "name": "itcig/caliban",
-            "version": "v1.0.9",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itcig/caliban.git",
-                "reference": "57d268e3781504e42215e58c865ae83f4a2e141b"
+                "reference": "0ce395b9db0036d43db7f0899d4318640b489dab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/itcig/caliban/zipball/0ce395b9db0036d43db7f0899d4318640b489dab",
+                "reference": "0ce395b9db0036d43db7f0899d4318640b489dab",
+                "shasum": ""
             },
             "require": {
                 "itcig/php-helpers": "^1.0",
@@ -27,6 +33,10 @@
                     "Caliban\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Brad",
@@ -34,15 +44,21 @@
                 }
             ],
             "description": "Utility for reading and writing client session data",
-            "time": "2020-03-30T16:10:31+00:00"
+            "time": "2020-03-31T05:03:00+00:00"
         },
         {
             "name": "itcig/php-helpers",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itcig/php-helpers.git",
-                "reference": "b3bdf77c1145c5d8dab3f5095b25d3fe744b7fe0"
+                "reference": "c3f131a1a0c9f8e89bb431ffee9931c424afbb18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/itcig/php-helpers/zipball/c3f131a1a0c9f8e89bb431ffee9931c424afbb18",
+                "reference": "c3f131a1a0c9f8e89bb431ffee9931c424afbb18",
+                "shasum": ""
             },
             "require": {
                 "php": "^7.1"
@@ -56,6 +72,10 @@
                     "Cig\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
             "authors": [
                 {
                     "name": "Brad",
@@ -63,7 +83,7 @@
                 }
             ],
             "description": "PHP helper methods",
-            "time": "2020-03-30T03:11:09+00:00"
+            "time": "2020-03-30T19:37:38+00:00"
         },
         {
             "name": "oscarotero/env",
