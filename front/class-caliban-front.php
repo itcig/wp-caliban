@@ -128,6 +128,10 @@ class Caliban_Front {
 			$tracker->set('setSessionTimeout', CBN_CACHE_EXPIRATION);
 		}
 
+		if (defined('CBN_IGNORE_PARAMS')) {
+			$tracker->set('setIgnoreParams', CBN_IGNORE_PARAMS);
+		}
+
 		if (defined('CBN_APPEND_PARAMS')) {
 			$tracker->set('setAppendParams', CBN_APPEND_PARAMS);
 		}
