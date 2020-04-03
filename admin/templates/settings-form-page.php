@@ -28,6 +28,16 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <th scope="row">
+                        <label for="ignore_params">Ignore Params (CBN_IGNORE_PARAMS)</label>
+                    </th>
+                    <td>
+                        <input id="ignore_params" name="ignore_params" type="text" class="regular-text" value="<?= $caliban_settings['ignore_params'] ?>"/>
+                        <p class="description">Params to ignore from adding to session or adding to form append (comma-separated)</p>
+                    </td>
+                </tr>
+
 				<tr>
 					<th scope="row">
 						<label for="append_params">Append Params (CBN_APPEND_PARAMS)</label>
