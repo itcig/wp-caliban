@@ -34,6 +34,10 @@ class Caliban_Admin_Settings {
 				'data_type' => 'string',
 				'constant_name' => 'CBN_CACHE_EXPIRATION',
 			],
+			'ignore_params' => [
+				'data_type' => 'string_array',
+				'constant_name' => 'CBN_IGNORE_PARAMS',
+			],
 			'append_params' => [
 				'data_type' => 'string_array',
 				'constant_name' => 'CBN_APPEND_PARAMS',
