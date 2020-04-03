@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "itcig/caliban",
-            "version": "v1.1.3",
+            "version": "v1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itcig/caliban.git",
-                "reference": "e71582bd6d0e98d5c6f4d55342d9e8a6def89532"
+                "reference": "7d42e33e0739afe0a9d060cfd6a4bd95c7c7112d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/itcig/caliban/zipball/e71582bd6d0e98d5c6f4d55342d9e8a6def89532",
-                "reference": "e71582bd6d0e98d5c6f4d55342d9e8a6def89532",
+                "url": "https://api.github.com/repos/itcig/caliban/zipball/7d42e33e0739afe0a9d060cfd6a4bd95c7c7112d",
+                "reference": "7d42e33e0739afe0a9d060cfd6a4bd95c7c7112d",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 }
             ],
             "description": "Utility for reading and writing client session data",
-            "time": "2020-04-03T06:28:49+00:00"
+            "time": "2020-04-03T06:59:05+00:00"
         },
         {
             "name": "itcig/php-helpers",
