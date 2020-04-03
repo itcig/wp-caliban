@@ -111,18 +111,6 @@ class Caliban_Front {
 	 */
 	public function load_js_tracker() {
 
-		$sesh = \Caliban\Caliban::get_instance()
-			// ->set_url(str_replace('&amp;', '&', urldecode($_GET['src_uri'])))
-			                    ->set_append_params(['campaigncode'])
-		                        ->set_cache_expiration_seconds(30)
-		                        ->set_referrer('https://www.google.com/')
-		                        ->init()
-			//                                  ->save()
-			                    ->toJSON();
-
-		var_dump($sesh);
-		die();
-
 //		$caliban = \Caliban\Caliban::get_instance()->init()->save();
 
 		// Create new tracker JS client
