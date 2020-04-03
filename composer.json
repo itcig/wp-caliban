@@ -13,6 +13,6 @@
 	},
 	"prefer-stable": true,
 	"require": {
-		"itcig/caliban": "^1.0"
+		"itcig/caliban": "*"
 	}
 }
