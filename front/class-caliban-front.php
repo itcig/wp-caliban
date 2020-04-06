@@ -136,6 +136,10 @@ class Caliban_Front {
 			$tracker->set('setAppendParams', CBN_APPEND_PARAMS);
 		}
 
+		if (defined('CBN_FIRST_ATTRIBUTION_PARAMS')) {
+			$tracker->set('setFirstAttributionParams', CBN_FIRST_ATTRIBUTION_PARAMS);
+		}
+
 		if (defined('CBN_CAMPAIGN_START_PARAMS')) {
 			$tracker->set('setCampaignStartParams', CBN_CAMPAIGN_START_PARAMS);
 		}
