@@ -101,6 +101,11 @@ class Caliban_Front {
 					$setting_value = boolval($setting_value);
 				}
 
+				// Decode JSON into an associative array
+				if ($data_type === 'json_array') {
+					$setting_value = json_decode($setting_value, true);
+				}
+
 				define($constant_name, $setting_value);
 			}
 		}

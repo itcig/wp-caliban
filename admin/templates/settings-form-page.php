@@ -90,6 +90,26 @@
 
                 <tr>
                     <th scope="row">
+                        <label for="redis_servers">Redis Servers (CBN_REDIS_SERVERS)</label>
+                    </th>
+                    <td>
+                        <input id="redis_servers" name="redis_servers" type="text" class="regular-text" value="<?= $caliban_settings['redis_servers'] ?>"/>
+                        <p class="description">Redis server(s) to connect to in format <code>tcp://10.50.50.180:7001</code>. For a cluster, separate multiple instance with comma.</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">
+                        <label for="redis_options">Redis Options (CBN_REDIS_OPTIONS)</label>
+                    </th>
+                    <td>
+                        <textarea id="redis_options" name="redis_options" class="regular-text"><?= $caliban_settings['redis_options'] ?></textarea>
+                        <p class="description">JSON-encoded string for Predis client parameters</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">
                         <label for="form_input_namespace">Form Input Namespace (CBN_FORM_INPUT_NAMESPACE)</label>
                     </th>
                     <td>

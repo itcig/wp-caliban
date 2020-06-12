@@ -54,6 +54,14 @@ class Caliban_Admin_Settings {
 				'data_type' => 'string_array',
 				'constant_name' => 'CBN_IGNORE_CLASSES',
 			],
+			'redis_servers' => [
+				'data_type' => 'string',
+				'constant_name' => 'CBN_REDIS_SERVERS',
+			],
+			'redis_options' => [
+				'data_type' => 'json_array',
+				'constant_name' => 'CBN_REDIS_OPTIONS',
+			],
 			'debug' => [
 				'data_type' => 'bool',
 				'constant_name' => 'CBN_DEBUG',
