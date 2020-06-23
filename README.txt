@@ -47,6 +47,14 @@ e.g.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
 
+== Rewrite rules ==
+
+If you enforce trailing slashes
+
+Apache / .htaccess
+
+`RewriteCond %{REQUEST_URI} !^/collect`
+
 == Frequently Asked Questions ==
 
 = A question that someone might have =
