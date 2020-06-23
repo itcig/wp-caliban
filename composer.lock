@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "itcig/caliban",
-            "version": "v1.2.1",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itcig/caliban.git",
-                "reference": "7858cf299436d2b52b58b07ef6e8d716d055a12f"
+                "reference": "767b60902f511994f3c7be6d439b1e78e1333699"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/itcig/caliban/zipball/7858cf299436d2b52b58b07ef6e8d716d055a12f",
-                "reference": "7858cf299436d2b52b58b07ef6e8d716d055a12f",
+                "url": "https://api.github.com/repos/itcig/caliban/zipball/767b60902f511994f3c7be6d439b1e78e1333699",
+                "reference": "767b60902f511994f3c7be6d439b1e78e1333699",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 }
             ],
             "description": "Utility for reading and writing client session data",
-            "time": "2020-06-12T21:05:17+00:00"
+            "time": "2020-06-23T16:23:59+00:00"
         },
         {
             "name": "itcig/php-helpers",
@@ -296,16 +296,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.17.0",
+            "version": "v1.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9"
+                "reference": "2edd75b8b35d62fd3eeabba73b26b8f1f60ce13d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
-                "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/2edd75b8b35d62fd3eeabba73b26b8f1f60ce13d",
+                "reference": "2edd75b8b35d62fd3eeabba73b26b8f1f60ce13d",
                 "shasum": ""
             },
             "require": {
@@ -318,6 +318,10 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.17-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -364,7 +368,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-12T16:14:59+00:00"
+            "time": "2020-06-06T08:46:27+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
