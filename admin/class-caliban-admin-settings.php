@@ -66,6 +66,10 @@ class Caliban_Admin_Settings {
 				'data_type' => 'bool',
 				'constant_name' => 'CBN_DEBUG',
 			],
+			'debug_container' => [
+				'data_type' => 'bool',
+				'constant_name' => 'CBN_DEBUG_CONTAINER',
+			],
 			'form_input_namespace' => [
 				'data_type' => 'string',
 				'constant_name' => 'CBN_FORM_INPUT_NAMESPACE',

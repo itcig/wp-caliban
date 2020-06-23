@@ -131,6 +131,19 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <th scope="row">
+                        <label>Debug Cache Object (CBN_DEBUG_CONTAINER)</label>
+                    </th>
+                    <td>
+                        <label for="debug_container">
+                            <input id="debug_container" name="debug_container" type="checkbox" class="checkbox-input" value="1" <?= $caliban_settings['debug_container'] ? 'checked' : ''; ?> />
+                            Enabled
+                        </label>
+                        <p class="description">Enable a second cache container with debug information prefixed by <code>__debug__</code> (This is for back-end diagnosis only and is transparent to the client)</p>
+                    </td>
+                </tr>
+
 			</table>
 
 			<p class="submit">
