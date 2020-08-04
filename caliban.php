@@ -68,7 +68,7 @@ try {
 	spl_autoload_register(function(string $class) : void {
 		$class_name_parts = explode('\\', $class);
 		$class_name = array_pop($class_name_parts);
-		$namespace =  implode($class_name_parts, '\\');
+		$namespace =  implode('\\', $class_name_parts);
 
 		$folder = str_replace('\\', '/', strtolower(preg_replace('/Caliban\\\WP\\\?/', '', $namespace)));
 
