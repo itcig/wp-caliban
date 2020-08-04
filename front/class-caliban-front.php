@@ -121,8 +121,6 @@ class Caliban_Front {
 		// Create new tracker JS client
 		$tracker = \Caliban\Caliban::get_instance()->client();
 
-		// Use `apply_filters()` to set event + values
-
 		// TODO: Need to send session Id to JS or retrieve via URL/Cookie in caliban.js
 
 		if (defined('CBN_PROPERTY_ID')) {
@@ -165,9 +163,15 @@ class Caliban_Front {
 			$tracker->set('enableLinkTracking', CBN_ENABLE_LINK_TRACKING);
 		}
 
+
+		// Use `apply_filters()` to set event + values
+		$tracker = apply_filters('caliban_client_tracker', $tracker);
+
+
 		$tracker->set('trackRequest');
 
 		// Load Caliban tracker
 		$tracker->load_tracker();
 	}
+
 }
