@@ -147,7 +147,7 @@ class Caliban_Admin_Settings {
 		}
 
 		// Populate input values on settings-form-page
-		$caliban_settings = get_option('caliban_settings');
+		$caliban_settings = get_option('caliban_settings', []);
 
 		require_once plugin_dir_path(__FILE__) . 'templates/settings-form-page.php';
 	}
